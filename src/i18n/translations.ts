@@ -1,0 +1,556 @@
+export type Locale = "en" | "uz" | "ru";
+
+export const translations = {
+  // ── Navbar ──
+  "nav.portals": { en: "Portals", uz: "Portallar", ru: "Порталы" },
+  "nav.documents": { en: "Documents", uz: "Hujjatlar", ru: "Документы" },
+  "nav.kpis": { en: "KPIs", uz: "KPI", ru: "KPI" },
+  "nav.triggers": { en: "Triggers", uz: "Triggerlar", ru: "Триггеры" },
+  "nav.fleet": { en: "Fleet", uz: "Avtopark", ru: "Автопарк" },
+  "nav.vehicle": { en: "Vehicle Health", uz: "Texnik holat", ru: "Состояние ТС" },
+  "nav.stack": { en: "Stack", uz: "Texnologiya", ru: "Стек" },
+  "nav.gl": { en: "G/L Logic", uz: "B/K Mantiq", ru: "Логика ГК" },
+  "nav.systemActive": { en: "System Active", uz: "Tizim faol", ru: "Система активна" },
+
+  // ── Hero ──
+  "hero.badge": { en: "System Online", uz: "Tizim onlayn", ru: "Система онлайн" },
+  "hero.version": { en: "v3.0 Enterprise", uz: "v3.0 Korporativ", ru: "v3.0 Корпоративная" },
+  "hero.title1": { en: "Transport", uz: "Transport", ru: "Транспорт" },
+  "hero.title2": { en: "Management", uz: "Boshqaruv", ru: "Управление" },
+  "hero.title3": { en: "System", uz: "Tizimi", ru: "Система" },
+  "hero.subtitle": {
+    en: "A standalone logistics platform where every truck movement is a synchronized financial event. Built on SAP-grade document structures —",
+    uz: "Har bir yuk mashinasi harakati sinxronlashtirilgan moliyaviy hodisa bo'lgan mustaqil logistika platformasi. SAP darajasidagi hujjat tuzilmalari asosida —",
+    ru: "Автономная логистическая платформа, где каждое движение грузовика — синхронизированное финансовое событие. Построена на документных структурах уровня SAP —",
+  },
+  "hero.subtitleHighlight": {
+    en: "from quote to incoming payment",
+    uz: "taklif narxidan to'lovgacha",
+    ru: "от котировки до входящего платежа",
+  },
+  "hero.scroll": { en: "Scroll to explore the architecture", uz: "Arxitekturani ko'rish uchun pastga aylantiring", ru: "Прокрутите, чтобы изучить архитектуру" },
+  "hero.stat.trips": { en: "Active Trips", uz: "Faol reyslar", ru: "Активные рейсы" },
+  "hero.stat.load": { en: "Load Time", uz: "Yuklash vaqti", ru: "Время загрузки" },
+  "hero.stat.gps": { en: "GPS Interval", uz: "GPS oraliq", ru: "Интервал GPS" },
+  "hero.stat.docs": { en: "Doc Types", uz: "Hujjat turlari", ru: "Типы документов" },
+
+  // ── Portals ──
+  "portals.section": { en: "01 / Architecture", uz: "01 / Arxitektura", ru: "01 / Архитектура" },
+  "portals.title": { en: "Three Portals,", uz: "Uchta portal,", ru: "Три портала," },
+  "portals.titleAccent": { en: "One Ledger", uz: "Bitta daftar", ru: "Одна книга" },
+  "portals.subtitle": {
+    en: "Every interaction across all portals writes to a unified financial sub-ledger. The Control Account mechanism ensures BP balances always match the General Ledger.",
+    uz: "Barcha portallardagi har bir o'zaro aloqa yagona moliyaviy sub-daftarga yoziladi. Nazorat hisobi mexanizmi BP balanslarining Bosh daftarga doimo mos kelishini ta'minlaydi.",
+    ru: "Каждое взаимодействие во всех порталах записывается в единый финансовый субледжер. Механизм контрольных счетов обеспечивает соответствие балансов БП Главной книге.",
+  },
+
+  // Admin portal
+  "portal.admin.title": { en: "WebAdmin Portal", uz: "WebAdmin Portal", ru: "Портал WebAdmin" },
+  "portal.admin.subtitle": { en: "Strategic Intelligence Hub", uz: "Strategik razvedka markazi", ru: "Центр стратегической аналитики" },
+  "portal.admin.users": { en: "Dispatchers · Fleet Managers · Accountants", uz: "Dispetcherlar · Avtopark boshqaruvchilari · Buxgalterlar", ru: "Диспетчеры · Менеджеры автопарка · Бухгалтеры" },
+  "portal.admin.f1.title": { en: "Financial Command Center", uz: "Moliyaviy boshqaruv markazi", ru: "Финансовый командный центр" },
+  "portal.admin.f1.desc": { en: "Real-time KPIs with 5-dimension analysis", uz: "5 o'lchovli tahlil bilan real vaqt KPI", ru: "KPI в реальном времени с 5-мерным анализом" },
+  "portal.admin.f1.detail": {
+    en: "Tracks Profit per Trip across Fleet, Route Type, Cargo Category, Customer Segment, and Time Period. Multidimensional pivot tables identify where operational overhead erodes margins in real-time.",
+    uz: "Avtopark, Marshrut turi, Yuk toifasi, Mijoz segmenti va Vaqt davri bo'yicha har bir reys foydasini kuzatadi.",
+    ru: "Отслеживает прибыль по рейсу по автопарку, типу маршрута, категории груза, сегменту клиента и периоду.",
+  },
+  "portal.admin.f2.title": { en: "Dispatch & G/L Orchestrator", uz: "Dispetcher va B/K orkestrator", ru: "Диспетчер и оркестратор ГК" },
+  "portal.admin.f2.desc": { en: "Split-screen hub with auto G/L determination", uz: "Avtomatik B/K aniqlash bilan bo'lingan ekran", ru: "Разделённый экран с авто-определением ГК" },
+  "portal.admin.f2.detail": {
+    en: "Every order assignment automatically applies Advanced G/L Determination rules, selecting the correct revenue and tax accounts based on Trip Origin or Customer Group.",
+    uz: "Har bir buyurtma tayinlash avtomatik ravishda Kengaytirilgan B/K aniqlash qoidalarini qo'llaydi.",
+    ru: "Каждое назначение заказа автоматически применяет правила определения ГК.",
+  },
+  "portal.admin.f3.title": { en: "Procurement & A/P Module", uz: "Xarid va K/Q moduli", ru: "Модуль закупок и КЗ" },
+  "portal.admin.f3.desc": { en: "PO → GRPO → A/P Invoice lifecycle", uz: "XB → QTQK → K/Q Hisob-faktura", ru: "ЗП → ПЗПО → Счёт КЗ" },
+  "portal.admin.f3.detail": {
+    en: "Manages Purchase Orders (OPOR) for parts to A/P Invoices (OPCH) for vendor fuel bills. The Allocation (GRNI) Account is automatically cleared upon invoice receipt.",
+    uz: "Ehtiyot qismlar uchun Xarid buyurtmalarini (OPOR) yetkazib beruvchi yoqilg'i hisoblari uchun K/Q hisob-fakturalarga (OPCH) boshqaradi.",
+    ru: "Управляет заказами на закупку (OPOR) деталей до счетов КЗ (OPCH) за топливо поставщиков.",
+  },
+  "portal.admin.f4.title": { en: "Fleet Planning & Cost Accounting", uz: "Avtopark rejalashtirish va xarajat hisobi", ru: "Планирование автопарка и учёт затрат" },
+  "portal.admin.f4.desc": { en: "Gantt calendar with distribution rules", uz: "Taqsimlash qoidalari bilan Gantt taqvimi", ru: "Диаграмма Ганта с правилами распределения" },
+  "portal.admin.f4.detail": {
+    en: "Prevents double-bookings while integrating Distribution Rules. Indirect costs (rent, dispatcher salaries) are allocated to trips based on fixed ratios or operational hours.",
+    uz: "Ikkilamchi band qilishni oldini oladi va Taqsimlash qoidalarini integratsiya qiladi.",
+    ru: "Предотвращает двойное бронирование с интеграцией правил распределения.",
+  },
+  "portal.admin.f5.title": { en: "Vehicle Health Monitor", uz: "Transport vositasi holati monitori", ru: "Мониторинг состояния ТС" },
+  "portal.admin.f5.desc": { en: "Fleet-wide diagnostics & maintenance scheduling", uz: "Butun avtopark diagnostikasi va texnik xizmat jadvali", ru: "Диагностика всего автопарка и планирование ТО" },
+  "portal.admin.f5.detail": {
+    en: "Aggregated dashboard showing all vehicle health scores, upcoming maintenance schedules, overdue inspections, and cost analysis per vehicle. Creates Service Calls (OSCL) for repairs and Purchase Orders (OPOR) for parts automatically.",
+    uz: "Barcha transport vositalari holati reytinglari, kelgusi texnik xizmat jadvallari, muddati o'tgan tekshiruvlar va har bir transport vositasi bo'yicha xarajat tahlilini ko'rsatuvchi yig'ma panel.",
+    ru: "Агрегированная панель с оценками состояния всех ТС, графиками ТО, просроченными инспекциями и анализом затрат по каждому ТС.",
+  },
+
+  // Driver portal
+  "portal.driver.title": { en: "Driver App", uz: "Haydovchi ilovasi", ru: "Приложение водителя" },
+  "portal.driver.subtitle": { en: "Mobile Procurement Terminal", uz: "Mobil xarid terminali", ru: "Мобильный терминал закупок" },
+  "portal.driver.users": { en: "Drivers", uz: "Haydovchilar", ru: "Водители" },
+  "portal.driver.f1.title": { en: "Significant Event Status Bar", uz: "Muhim hodisa holat paneli", ru: "Панель значимых событий" },
+  "portal.driver.f1.desc": { en: "Each tap triggers accounting events", uz: "Har bir bosish hisob hodisalarini ishga tushiradi", ru: "Каждое нажатие запускает учётные события" },
+  "portal.driver.f1.detail": {
+    en: "Large buttons for status changes. Tapping 'Loaded' or 'Delivered' acts as a Significant Accounting Event, triggering the automated A/R Invoice (OINV) creation.",
+    uz: "Holat o'zgarishlari uchun katta tugmalar. 'Yuklangan' yoki 'Yetkazilgan' tugmasi Muhim Buxgalterlik Hodisasi sifatida ishlaydi.",
+    ru: "Большие кнопки для смены статуса. Нажатие 'Загружен' или 'Доставлен' запускает автоматическое создание счёта ДЗ (OINV).",
+  },
+  "portal.driver.f2.title": { en: "Mobile GRPO Scanner", uz: "Mobil GRPO skaner", ru: "Мобильный сканер ГРПО" },
+  "portal.driver.f2.desc": { en: "Fuel & toll logging as Goods Receipts", uz: "Yoqilg'i va to'lov loglari", ru: "Учёт топлива и сборов" },
+  "portal.driver.f2.detail": {
+    en: "When a driver logs fuel or tolls, the app initiates a Goods Receipt PO (OPDN) equivalent, recognizing the asset/expense and accruing the liability in real-time.",
+    uz: "Haydovchi yoqilg'i yoki to'lovlarni qayd qilganda, ilova real vaqtda aktivni/xarajatni tan oladi.",
+    ru: "Когда водитель регистрирует топливо или сборы, приложение инициирует эквивалент ГРПО (OPDN).",
+  },
+  "portal.driver.f3.title": { en: "Expense & Landed Cost Capture", uz: "Xarajat va qo'shimcha xarajatlar", ru: "Учёт расходов и доп. затрат" },
+  "portal.driver.f3.desc": { en: "Receipts → capitalized trip costs", uz: "Kvitansiyalar → kapitallashtirilgan reys xarajatlari", ru: "Чеки → капитализированные затраты" },
+  "portal.driver.f3.detail": {
+    en: "Drivers scan receipts for border fees or tolls. These are flagged as Landed Costs, capitalized directly into the specific Trip Cost.",
+    uz: "Haydovchilar chegara to'lovlari yoki yo'l to'lovlari uchun kvitansiyalarni skanerlaydi.",
+    ru: "Водители сканируют чеки за пограничные сборы или пошлины.",
+  },
+  "portal.driver.f4.title": { en: "Passive GPS & Offline Sync", uz: "Passiv GPS va oflayn sinxronlash", ru: "Пассивный GPS и офлайн-синхр." },
+  "portal.driver.f4.desc": { en: "5-second tracking with offline queue", uz: "Oflayn navbat bilan 5 soniyalik kuzatuv", ru: "5-секундное отслеживание с офлайн-очередью" },
+  "portal.driver.f4.detail": {
+    en: "Pushes GPS data every 5 seconds for live tracking. Supports robust offline storage for photo uploads (CMRs, weight tickets), syncing once connectivity returns.",
+    uz: "Jonli kuzatuv uchun har 5 soniyada GPS ma'lumotlarini yuboradi. Foto yuklashlar uchun mustahkam oflayn saqlashni qo'llab-quvvatlaydi.",
+    ru: "Отправляет GPS-данные каждые 5 секунд. Поддерживает офлайн-хранение для фото (CMR, весовые талоны).",
+  },
+  "portal.driver.f5.title": { en: "Vehicle Health Check", uz: "Transport holati tekshiruvi", ru: "Проверка состояния ТС" },
+  "portal.driver.f5.desc": { en: "Pre-trip inspection & defect reporting", uz: "Reys oldidan tekshiruv va nuqsonlar hisoboti", ru: "Предрейсовый осмотр и отчёт о дефектах" },
+  "portal.driver.f5.detail": {
+    en: "Digital pre-trip checklist with photo evidence. Drivers report tire pressure, brake condition, lights, fluid levels. Defects auto-generate Service Calls (OSCL) for repair scheduling.",
+    uz: "Foto dalil bilan raqamli reys oldidan tekshiruv ro'yxati. Haydovchilar shinalar bosimi, tormoz holati, chiroqlar, suyuqlik darajalarini hisobot qiladi.",
+    ru: "Цифровой предрейсовый чеклист с фото-доказательствами. Водители сообщают о давлении шин, состоянии тормозов, фарах, уровнях жидкости.",
+  },
+  "portal.driver.f6.title": { en: "Maintenance Log", uz: "Texnik xizmat jurnali", ru: "Журнал обслуживания" },
+  "portal.driver.f6.desc": { en: "Digital service history per vehicle", uz: "Har bir transport vositasi bo'yicha raqamli xizmat tarixi", ru: "Цифровая история обслуживания по ТС" },
+  "portal.driver.f6.detail": {
+    en: "Complete maintenance history accessible on mobile. View past repairs, upcoming service intervals, and real-time OBD-II diagnostics. Alerts for overdue maintenance items.",
+    uz: "Mobilda mavjud bo'lgan to'liq texnik xizmat tarixi. O'tgan ta'mirlar, kelgusi xizmat oraliqlarini ko'rish.",
+    ru: "Полная история обслуживания на мобильном. Просмотр прошлых ремонтов, предстоящих интервалов обслуживания.",
+  },
+
+  // Customer portal
+  "portal.customer.title": { en: "Customer Portal", uz: "Mijoz portali", ru: "Портал клиента" },
+  "portal.customer.subtitle": { en: "Transparency & CRM Layer", uz: "Shaffoflik va CRM qatlami", ru: "Слой прозрачности и CRM" },
+  "portal.customer.users": { en: "Clients", uz: "Mijozlar", ru: "Клиенты" },
+  "portal.customer.f1.title": { en: "Lead-to-Cash Dashboard", uz: "Liddan naqd pulga panel", ru: "Панель от лида до оплаты" },
+  "portal.customer.f1.desc": { en: "Lead → Customer conversion with credit checks", uz: "Lid → Mijozga o'tkazish kredit tekshiruvi bilan", ru: "Лид → Клиент с проверкой кредита" },
+  "portal.customer.f1.detail": {
+    en: "New clients register as Leads (OCRD Type: L) to view Sales Quotations. Converted to Customer status after credit checks.",
+    uz: "Yangi mijozlar Savdo takliflarini ko'rish uchun Lid sifatida (OCRD turi: L) ro'yxatdan o'tadi.",
+    ru: "Новые клиенты регистрируются как лиды (OCRD тип: L) для просмотра коммерческих предложений.",
+  },
+  "portal.customer.f2.title": { en: "Real-Time Tracking & Timeline", uz: "Real vaqt kuzatuv va xronologiya", ru: "Отслеживание в реальном времени" },
+  "portal.customer.f2.desc": { en: "Map view with dynamic ETAs", uz: "Dinamik ETA bilan xarita ko'rinishi", ru: "Карта с динамическим ETA" },
+  "portal.customer.f2.detail": {
+    en: "A map-centric view providing live status updates with dynamic ETAs. Timeline shows every significant event.",
+    uz: "Dinamik ETA bilan jonli holat yangilanishlarini taqdim etuvchi xaritaga yo'naltirilgan ko'rinish.",
+    ru: "Картоцентричный вид с обновлениями статуса в реальном времени и динамическим ETA.",
+  },
+  "portal.customer.f3.title": { en: "A/R Visibility", uz: "D/O ko'rinuvchanlik", ru: "Видимость ДЗ" },
+  "portal.customer.f3.desc": { en: "PDF invoices, payment status, reconciliation", uz: "PDF hisob-fakturalar, to'lov holati", ru: "PDF-счета, статус оплаты, сверка" },
+  "portal.customer.f3.detail": {
+    en: "Clients download PDF A/R Invoices (OINV) and view payment statuses. Internal Reconciliations show which payments cleared which invoices.",
+    uz: "Mijozlar PDF D/O hisob-fakturalarini (OINV) yuklab oladi va to'lov holatlarini ko'radi.",
+    ru: "Клиенты скачивают PDF-счета ДЗ (OINV) и просматривают статусы оплат.",
+  },
+
+  // ── WebAdmin New Features ──
+  "portal.admin.f6.title": { en: "Route Optimization Engine", uz: "Marshrut optimallashtirish mexanizmi", ru: "Движок оптимизации маршрутов" },
+  "portal.admin.f6.desc": { en: "AI-powered route planning & cost estimation", uz: "AI asosidagi marshrut rejalashtirish", ru: "ИИ-планирование маршрутов и оценка затрат" },
+  "portal.admin.f6.detail": {
+    en: "AI-powered route planning with fuel cost estimation, toll calculations, and delivery time optimization across multiple stops. Considers vehicle capacity, driver hours regulations, and road restrictions.",
+    uz: "Yoqilg'i narxini baholash, yo'l to'lovlari hisobi va bir nechta to'xtash joylari bo'ylab yetkazib berish vaqtini optimallashtirish bilan AI asosidagi marshrut rejalashtirish. Transport vositasi sig'imi, haydovchi ish soatlari qoidalari va yo'l cheklovlarini hisobga oladi.",
+    ru: "ИИ-планирование маршрутов с оценкой стоимости топлива, расчётом пошлин и оптимизацией времени доставки по нескольким остановкам. Учитывает грузоподъёмность, нормы рабочего времени водителей и дорожные ограничения.",
+  },
+  "portal.admin.f7.title": { en: "Driver Performance Analytics", uz: "Haydovchi samaradorligi tahlili", ru: "Аналитика эффективности водителей" },
+  "portal.admin.f7.desc": { en: "Scorecards: fuel efficiency, on-time rate, safety", uz: "Baholash kartalari: yoqilg'i samaradorligi, o'z vaqtidalik", ru: "Карточки: расход топлива, пунктуальность, безопасность" },
+  "portal.admin.f7.detail": {
+    en: "Scorecards per driver tracking fuel efficiency, on-time delivery rate, safety incidents, idle time, and harsh braking events. Compare drivers across the fleet with ranking dashboards.",
+    uz: "Har bir haydovchi uchun yoqilg'i samaradorligi, o'z vaqtida yetkazib berish ko'rsatkichi, xavfsizlik hodisalari, bo'sh turish vaqti va keskin tormozlash hodisalarini kuzatuvchi baholash kartalari.",
+    ru: "Карточки показателей водителей: расход топлива, процент своевременных доставок, инциденты безопасности, время простоя, резкие торможения. Сравнение водителей по всему автопарку.",
+  },
+  "portal.admin.f8.title": { en: "Customer Credit Management", uz: "Mijoz kredit boshqaruvi", ru: "Управление кредитами клиентов" },
+  "portal.admin.f8.desc": { en: "Credit limits, aging reports, auto-hold orders", uz: "Kredit limitlari, eskirish hisobotlari", ru: "Кредитные лимиты, отчёты по старению" },
+  "portal.admin.f8.detail": {
+    en: "Credit limit monitoring with aging reports (30/60/90 days). Automatic hold on new orders when credit limit is exceeded. Payment terms management per customer with configurable dunning levels.",
+    uz: "Eskirish hisobotlari (30/60/90 kun) bilan kredit limitini monitoring qilish. Kredit limiti oshganda yangi buyurtmalarni avtomatik to'xtatib turish. Har bir mijoz uchun to'lov shartlarini boshqarish.",
+    ru: "Мониторинг кредитных лимитов с отчётами по старению (30/60/90 дней). Автоматическая блокировка новых заказов при превышении лимита. Управление условиями оплаты по клиентам.",
+  },
+  "portal.admin.f9.title": { en: "Multi-Currency & Tax Engine", uz: "Ko'p valyuta va soliq mexanizmi", ru: "Мультивалютный и налоговый движок" },
+  "portal.admin.f9.desc": { en: "Cross-border FX, VAT, customs duties", uz: "Transchegaraviy valyuta, QQS, bojxona", ru: "Трансграничный FX, НДС, таможенные пошлины" },
+  "portal.admin.f9.detail": {
+    en: "Cross-border transport support with automatic currency conversion at daily ECB rates, VAT/customs duty calculation per country, and withholding tax management. Multi-currency A/R and A/P posting.",
+    uz: "Kunlik ECB kurslari bo'yicha avtomatik valyuta konvertatsiyasi, har bir mamlakat bo'yicha QQS/bojxona boji hisobi va ushlab qolish solig'ini boshqarish bilan transchegaraviy transport qo'llab-quvvatlash.",
+    ru: "Поддержка трансграничных перевозок с автоматической конвертацией валют по курсам ЕЦБ, расчётом НДС/таможенных пошлин по странам и управлением налогом у источника.",
+  },
+  "portal.admin.f10.title": { en: "Automated Alerts & Escalations", uz: "Avtomatlashtirilgan ogohlantirishlar", ru: "Автоматические уведомления" },
+  "portal.admin.f10.desc": { en: "Rules engine: late delivery, budget, maintenance", uz: "Qoidalar mexanizmi: kechikish, byudjet, texnik xizmat", ru: "Движок правил: задержки, бюджет, ТО" },
+  "portal.admin.f10.detail": {
+    en: "Configurable rules engine for late delivery alerts, budget overrun warnings, maintenance overdue notifications, and driver hours compliance. Push notifications via Telegram, Email, and in-app.",
+    uz: "Kechiktirilgan yetkazib berish ogohlantirishlari, byudjet oshib ketishi ogohlantirishlari, texnik xizmat muddati o'tganligi va haydovchi ish soatlari muvofiqligi uchun sozlanishi mumkin qoidalar mexanizmi.",
+    ru: "Настраиваемый движок правил для уведомлений о задержках доставки, превышении бюджета, просроченном ТО и соблюдении рабочего времени водителей. Push через Telegram, Email и в приложении.",
+  },
+  "portal.admin.f11.title": { en: "Reporting & Export Center", uz: "Hisobotlar va eksport markazi", ru: "Центр отчётов и экспорта" },
+  "portal.admin.f11.desc": { en: "P&L, fleet utilization, aging — PDF/Excel", uz: "F/Z, avtopark foydalanish, eskirish — PDF/Excel", ru: "PnL, утилизация автопарка, старение — PDF/Excel" },
+  "portal.admin.f11.detail": {
+    en: "P&L analysis by route/customer/vehicle, fleet utilization reports, driver efficiency comparisons, aging analysis, and tax compliance reports. One-click export to PDF and Excel with scheduled auto-delivery.",
+    uz: "Marshrut/mijoz/transport vositasi bo'yicha F/Z tahlili, avtopark foydalanish hisobotlari, haydovchi samaradorligi taqqoslashlari. PDF va Excel ga bir bosish bilan eksport.",
+    ru: "Анализ PnL по маршруту/клиенту/ТС, отчёты по утилизации автопарка, сравнение эффективности водителей, анализ старения, налоговые отчёты. Экспорт в PDF/Excel по расписанию.",
+  },
+
+  // ── Driver App New Features ──
+  "portal.driver.f7.title": { en: "Turn-by-Turn Navigation", uz: "Navbatma-navbat navigatsiya", ru: "Пошаговая навигация" },
+  "portal.driver.f7.desc": { en: "Truck-optimized routing with restrictions", uz: "Cheklovlar bilan yuk mashinasi uchun marshrut", ru: "Маршрутизация для грузовиков с ограничениями" },
+  "portal.driver.f7.detail": {
+    en: "Integrated route guidance optimized for truck restrictions — bridge height clearance, weight limits, hazmat routes, and low-emission zones. Shows next stop ETA, remaining distance, and fuel range warnings.",
+    uz: "Yuk mashinasi cheklovlari uchun optimallashtirilgan marshrut ko'rsatmasi — ko'prik balandligi, og'irlik cheklovlari, xavfli yuk marshrutlari. Keyingi to'xtash joyi ETA, qolgan masofa va yoqilg'i oralig'i ogohlantirishlarini ko'rsatadi.",
+    ru: "Маршрутная навигация, оптимизированная для грузовиков — высота мостов, весовые ограничения, маршруты для опасных грузов, зоны низких выбросов. Показывает ETA следующей остановки и запас хода по топливу.",
+  },
+  "portal.driver.f8.title": { en: "Digital CMR / Waybill", uz: "Raqamli CMR / Yo'l varaqasi", ru: "Электронная CMR / Накладная" },
+  "portal.driver.f8.desc": { en: "E-consignment notes with QR & digital signature", uz: "QR va raqamli imzo bilan elektron yuk xatlari", ru: "Электронные накладные с QR и цифровой подписью" },
+  "portal.driver.f8.detail": {
+    en: "Electronic consignment notes (eCMR) with QR code generation for instant verification. Customer signs on glass screen at delivery. Signed documents auto-upload to the financial sub-ledger with timestamp and GPS coordinates.",
+    uz: "Tezkor tekshirish uchun QR kod yaratish bilan elektron yuk xatlari (eCMR). Mijoz yetkazib berishda oyna ekranida imzo chekadi. Imzolangan hujjatlar vaqt belgisi va GPS koordinatalari bilan moliyaviy sub-daftarga avto-yuklanadi.",
+    ru: "Электронные накладные (eCMR) с генерацией QR-кода для мгновенной верификации. Клиент подписывает на стеклянном экране при доставке. Подписанные документы авто-загружаются в субледжер с меткой времени и GPS-координатами.",
+  },
+  "portal.driver.f9.title": { en: "Hours of Service (HOS) Tracker", uz: "Xizmat soatlari (HOS) kuzatuvchi", ru: "Трекер рабочего времени (HOS)" },
+  "portal.driver.f9.desc": { en: "Driving hours logging & break reminders", uz: "Haydash soatlarini qayd qilish va tanaffus eslatmalari", ru: "Учёт часов вождения и напоминания о перерывах" },
+  "portal.driver.f9.detail": {
+    en: "Automatic driving hours logging per EU Regulation 561/2006 and local regulations. Visual countdown showing remaining drive time. Break reminders with mandatory rest period tracking. Digital tachograph integration ready.",
+    uz: "EU Regulation 561/2006 va mahalliy qoidalarga muvofiq avtomatik haydash soatlarini qayd qilish. Qolgan haydash vaqtini ko'rsatuvchi vizual ortga hisoblash. Majburiy dam olish davrini kuzatish bilan tanaffus eslatmalari.",
+    ru: "Автоматический учёт часов вождения по Регламенту ЕС 561/2006 и местным нормам. Визуальный обратный отсчёт оставшегося времени вождения. Напоминания о перерывах с отслеживанием обязательного отдыха. Готовность к интеграции с цифровым тахографом.",
+  },
+  "portal.driver.f10.title": { en: "Load Weight Scanner", uz: "Yuk og'irligi skaneri", ru: "Сканер веса груза" },
+  "portal.driver.f10.desc": { en: "Axle weight verification & overload prevention", uz: "O'q og'irligini tekshirish va ortiqcha yukni oldini olish", ru: "Проверка осевой нагрузки и предотвращение перегруза" },
+  "portal.driver.f10.detail": {
+    en: "Camera-based or manual entry for axle weight verification at pickup and delivery points. Prevents overloading violations with real-time alerts. Records gross/tare/net weights for cargo reconciliation and customs documentation.",
+    uz: "Yuklash va yetkazib berish joylarida o'q og'irligini tekshirish uchun kameraga asoslangan yoki qo'lda kiritish. Real vaqt ogohlantirishlari bilan ortiqcha yuklash buzilishlarini oldini oladi.",
+    ru: "Проверка осевой нагрузки камерой или вручную в точках погрузки и выгрузки. Предотвращение перегруза с уведомлениями в реальном времени. Фиксация брутто/тара/нетто веса для сверки груза и таможенной документации.",
+  },
+  "portal.driver.f11.title": { en: "Emergency & Incident Reporting", uz: "Favqulodda va hodisa hisoboti", ru: "Экстренные ситуации и инциденты" },
+  "portal.driver.f11.desc": { en: "One-tap SOS, accident reports, insurance claims", uz: "Bir tugmali SOS, baxtsiz hodisa hisobotlari", ru: "SOS одной кнопкой, отчёты о ДТП, страховые заявки" },
+  "portal.driver.f11.detail": {
+    en: "One-tap SOS button sends GPS location to fleet manager and emergency services. Structured accident report form with photo/video evidence capture. Auto-generates insurance claim documents linked to trip and vehicle records.",
+    uz: "Bir tugmali SOS tugmasi GPS joylashuvini avtopark boshqaruvchisi va favqulodda xizmatlarga yuboradi. Foto/video dalillarni olish bilan tuzilgan baxtsiz hodisa hisoboti shakli. Reys va transport vositasi yozuvlariga bog'langan sug'urta da'vosi hujjatlarini avto-yaratadi.",
+    ru: "Кнопка SOS одним нажатием отправляет GPS-локацию менеджеру автопарка и экстренным службам. Структурированная форма отчёта о ДТП с фото/видео доказательствами. Авто-генерация документов страхового случая, привязанных к рейсу и ТС.",
+  },
+  "portal.driver.f12.title": { en: "Fuel Card Integration", uz: "Yoqilg'i kartasi integratsiyasi", ru: "Интеграция топливных карт" },
+  "portal.driver.f12.desc": { en: "Auto-match fuel transactions to trips", uz: "Yoqilg'i tranzaksiyalarini reyslarga avto-moslashtirish", ru: "Авто-сопоставление транзакций с рейсами" },
+  "portal.driver.f12.detail": {
+    en: "Link fuel card transactions (e.g., WOG, UzGasOil) to specific trips automatically by GPS proximity. Auto-match fuel receipts with card statements. Flag discrepancies and unusual consumption patterns for fleet manager review.",
+    uz: "GPS yaqinligi bo'yicha yoqilg'i karta tranzaksiyalarini (masalan, WOG, UzGasOil) muayyan reyslarga avtomatik bog'lash. Yoqilg'i kvitansiyalarini karta ko'chirmalari bilan avto-moslashtirish. Nomuvofiqliklar va g'ayrioddiy iste'mol naqshlarini belgilash.",
+    ru: "Автоматическая привязка транзакций топливных карт (WOG, UzGasOil) к конкретным рейсам по GPS-близости. Авто-сопоставление чеков за топливо с выписками по картам. Выделение расхождений и аномального потребления.",
+  },
+
+  // ── Customer Portal New Features ──
+  "portal.customer.f4.title": { en: "Self-Service Booking", uz: "O'z-o'ziga xizmat ko'rsatish broni", ru: "Самостоятельное бронирование" },
+  "portal.customer.f4.desc": { en: "Create requests, get auto-quotes, book instantly", uz: "So'rov yarating, avto-narx oling, darhol bron qiling", ru: "Создание заявок, авто-котировки, мгновенное бронирование" },
+  "portal.customer.f4.detail": {
+    en: "Customers create transport requests with pickup/delivery addresses, cargo details, and preferred dates. System auto-quotes based on route distance, cargo type, and contracted rates. One-click booking converts quote to Sales Order.",
+    uz: "Mijozlar yuklash/yetkazib berish manzillari, yuk tafsilotlari va afzal sanalar bilan transport so'rovlarini yaratadi. Tizim marshrut masofasi, yuk turi va shartnoma stavkalari asosida avto-narx beradi.",
+    ru: "Клиенты создают заявки на перевозку с адресами погрузки/выгрузки, данными груза и предпочтительными датами. Система авто-котирует по расстоянию, типу груза и контрактным ставкам. Бронирование одним кликом конвертирует котировку в заказ.",
+  },
+  "portal.customer.f5.title": { en: "Document Center", uz: "Hujjatlar markazi", ru: "Центр документов" },
+  "portal.customer.f5.desc": { en: "CMR, weight tickets, customs — all in one place", uz: "CMR, og'irlik chiptalari, bojxona — bir joyda", ru: "CMR, весовые талоны, таможня — всё в одном месте" },
+  "portal.customer.f5.detail": {
+    en: "Centralized access to all trip documents: signed CMR/eCMR, weight tickets, delivery confirmations, photos of goods, customs declarations, and certificates of origin. Download individually or as ZIP archive per trip.",
+    uz: "Barcha reys hujjatlariga markazlashtirilgan kirish: imzolangan CMR/eCMR, og'irlik chiptalari, yetkazib berish tasdiqlari, tovarlar fotosuratlari, bojxona deklaratsiyalari. Har bir reys uchun alohida yoki ZIP arxiv sifatida yuklab olish.",
+    ru: "Централизованный доступ ко всем документам рейса: подписанные CMR/eCMR, весовые талоны, подтверждения доставки, фото грузов, таможенные декларации, сертификаты происхождения. Скачивание по отдельности или ZIP-архивом по рейсу.",
+  },
+  "portal.customer.f6.title": { en: "Dispute & Claims Management", uz: "Nizolar va da'volarni boshqarish", ru: "Управление спорами и претензиями" },
+  "portal.customer.f6.desc": { en: "File claims for damaged/missing cargo", uz: "Buzilgan/yo'qolgan yuk uchun da'vo", ru: "Подача претензий за повреждённый/утерянный груз" },
+  "portal.customer.f6.detail": {
+    en: "File claims for damaged or missing cargo with photo evidence and timestamps. Track claim status through investigation stages. System auto-links claim to specific trip, vehicle, driver, and insurance policy for rapid resolution.",
+    uz: "Foto dalillar va vaqt belgilari bilan buzilgan yoki yo'qolgan yuk uchun da'volar kiriting. Tekshirish bosqichlari orqali da'vo holatini kuzating. Tizim da'voni tez hal qilish uchun muayyan reys, transport vositasi, haydovchi va sug'urta polisiga avto-bog'laydi.",
+    ru: "Подача претензий за повреждённый или утерянный груз с фото-доказательствами и метками времени. Отслеживание статуса претензии по этапам расследования. Авто-привязка к рейсу, ТС, водителю и страховому полису для быстрого разрешения.",
+  },
+  "portal.customer.f7.title": { en: "Rate Card & Contract Management", uz: "Tarif va shartnoma boshqaruvi", ru: "Тарифы и управление контрактами" },
+  "portal.customer.f7.desc": { en: "View rates, request renewals, compare pricing", uz: "Tariflarni ko'rish, yangilashni so'rash", ru: "Просмотр тарифов, запрос продления, сравнение цен" },
+  "portal.customer.f7.detail": {
+    en: "View contracted rates per route and cargo type. Request rate renewals before contract expiration. Compare spot market rates vs contracted rates with historical trend charts. Automatic rate escalation based on fuel index clauses.",
+    uz: "Marshrut va yuk turi bo'yicha shartnoma stavkalarini ko'ring. Shartnoma muddati tugashidan oldin stavkalarni yangilashni so'rang. Tarixiy trend diagrammalari bilan spot bozor stavkalarini shartnoma stavkalari bilan solishtiring.",
+    ru: "Просмотр контрактных ставок по маршрутам и типам грузов. Запрос продления до истечения контракта. Сравнение спотовых и контрактных ставок с историческими графиками. Автоматическая индексация ставок по топливным оговоркам.",
+  },
+  "portal.customer.f8.title": { en: "Shipment Analytics Dashboard", uz: "Yuk tashish tahlili paneli", ru: "Аналитика отправок" },
+  "portal.customer.f8.desc": { en: "Your KPIs: shipments, on-time %, spend trends", uz: "Sizning KPI: jo'natmalar, o'z vaqtidalik, xarajat", ru: "Ваши KPI: отправки, пунктуальность, тренды расходов" },
+  "portal.customer.f8.detail": {
+    en: "Customer's own performance dashboard: total shipments, on-time delivery percentage, average transit time, monthly spend breakdown, and top routes by volume. Interactive charts with drill-down. Exportable reports in PDF/Excel.",
+    uz: "Mijozning o'z samaradorlik paneli: jami jo'natmalar, o'z vaqtida yetkazib berish foizi, o'rtacha tranzit vaqti, oylik xarajat taqsimoti va hajm bo'yicha eng yaxshi marshrutlar. Chuqurroq tahlil bilan interaktiv diagrammalar.",
+    ru: "Собственная панель показателей клиента: общее количество отправок, процент своевременных доставок, среднее время транзита, помесячная разбивка расходов и топ-маршруты по объёму. Интерактивные графики с детализацией. Экспорт в PDF/Excel.",
+  },
+  "portal.customer.f9.title": { en: "Multi-User Access & Roles", uz: "Ko'p foydalanuvchi kirish va rollar", ru: "Многопользовательский доступ и роли" },
+  "portal.customer.f9.desc": { en: "Team invites, permissions, audit log", uz: "Jamoa takliflari, ruxsatlar, audit jurnali", ru: "Приглашение команды, разрешения, аудит-лог" },
+  "portal.customer.f9.detail": {
+    en: "Company admin can invite team members with role-based permissions: view-only, booking, finance, or full admin. Complete audit log of all user actions (login, booking, document download). SSO integration with corporate identity providers.",
+    uz: "Kompaniya administratori rolga asoslangan ruxsatlar bilan jamoa a'zolarini taklif qilishi mumkin: faqat ko'rish, bron qilish, moliya yoki to'liq administrator. Barcha foydalanuvchi harakatlarining to'liq audit jurnali.",
+    ru: "Администратор компании приглашает членов команды с ролевыми правами: только просмотр, бронирование, финансы или полный админ. Полный аудит-лог всех действий пользователей. SSO-интеграция с корпоративными провайдерами.",
+  },
+
+  // ── Document Flow ──
+  "docflow.section": { en: "02 / Document Lifecycle", uz: "02 / Hujjat hayot sikli", ru: "02 / Жизненный цикл документа" },
+  "docflow.title": { en: "Quote to", uz: "Taklifdan", ru: "От котировки до" },
+  "docflow.titleAccent": { en: "Cash", uz: "Naqd pulga", ru: "Оплаты" },
+  "docflow.subtitle": {
+    en: "The Relationship Map — every document links back to its origin. Click each stage to inspect the SAP-grade document structure.",
+    uz: "Aloqa xaritasi — har bir hujjat o'z manbasiga bog'lanadi. SAP darajasidagi hujjat tuzilmasini tekshirish uchun har bir bosqichni bosing.",
+    ru: "Карта связей — каждый документ связан с источником. Нажмите на этап для просмотра структуры документа уровня SAP.",
+  },
+  "docflow.keyFields": { en: "Key Fields", uz: "Asosiy maydonlar", ru: "Ключевые поля" },
+  "docflow.journalEntry": { en: "Journal Entry", uz: "Jurnal yozuvi", ru: "Журнальная проводка" },
+  "docflow.trigger": { en: "Trigger", uz: "Trigger", ru: "Триггер" },
+  "docflow.autoPost": { en: "Auto-posts to G/L on confirmation", uz: "Tasdiqlash bo'yicha B/K ga avto-joylash", ru: "Авто-проводка в ГК при подтверждении" },
+
+  // Doc stages
+  "doc.oqut.name": { en: "Sales Quotation", uz: "Savdo taklifi", ru: "Коммерческое предложение" },
+  "doc.oqut.desc": {
+    en: "Customer requests a transport quote. The system generates a non-binding offer with estimated costs, route details, and delivery timelines.",
+    uz: "Mijoz transport taklifi so'raydi. Tizim taxminiy xarajatlar, marshrut tafsilotlari va yetkazib berish muddatlari bilan majburiy bo'lmagan taklif yaratadi.",
+    ru: "Клиент запрашивает котировку перевозки. Система генерирует необязательное предложение с ориентировочными затратами.",
+  },
+  "doc.oqut.trigger": { en: "Customer submits request via Portal", uz: "Mijoz portal orqali so'rov yuboradi", ru: "Клиент отправляет запрос через портал" },
+  "doc.oqut.journal": { en: "No journal entry — informational document", uz: "Jurnal yozuvi yo'q — axborot hujjati", ru: "Нет проводки — информационный документ" },
+  "doc.ordr.name": { en: "Sales Order", uz: "Savdo buyurtmasi", ru: "Заказ на продажу" },
+  "doc.ordr.desc": {
+    en: "Quote accepted. A binding Sales Order is created, reserving fleet capacity and initiating the dispatch workflow.",
+    uz: "Taklif qabul qilindi. Majburiy Savdo buyurtmasi yaratiladi, avtopark sig'imi zaxiralanadi.",
+    ru: "Котировка принята. Создаётся обязательный заказ на продажу, резервируется мощность автопарка.",
+  },
+  "doc.ordr.trigger": { en: "Customer confirms quotation", uz: "Mijoz taklifni tasdiqlaydi", ru: "Клиент подтверждает котировку" },
+  "doc.ordr.journal": { en: "No P&L impact — commitment only", uz: "F/Z ta'siri yo'q — faqat majburiyat", ru: "Нет влияния на PnL — только обязательство" },
+  "doc.odln.name": { en: "Delivery", uz: "Yetkazib berish", ru: "Доставка" },
+  "doc.odln.desc": {
+    en: "Driver confirms 'Delivered' status. Goods are now at destination. This triggers revenue recognition conditions.",
+    uz: "Haydovchi 'Yetkazildi' holatini tasdiqlaydi. Tovarlar manzilga yetdi. Bu daromadni tan olish shartlarini ishga tushiradi.",
+    ru: "Водитель подтверждает статус 'Доставлено'. Товар на месте назначения. Запускается признание выручки.",
+  },
+  "doc.odln.trigger": { en: "Driver taps 'Delivered' in Mobile App", uz: "Haydovchi ilovada 'Yetkazildi' tugmasini bosadi", ru: "Водитель нажимает 'Доставлено' в приложении" },
+  "doc.oinv.name": { en: "A/R Invoice", uz: "D/O hisob-faktura", ru: "Счёт ДЗ" },
+  "doc.oinv.desc": {
+    en: "The system auto-generates the A/R Invoice upon confirmed delivery. Revenue is recognized, tax calculated, customer balance updated.",
+    uz: "Tizim yetkazib berish tasdiqlangandan so'ng avtomatik ravishda D/O hisob-fakturasini yaratadi.",
+    ru: "Система автоматически создаёт счёт ДЗ после подтверждения доставки.",
+  },
+  "doc.oinv.trigger": { en: "Auto-generated post delivery confirmation", uz: "Yetkazib berish tasdig'idan keyin avto-yaratilgan", ru: "Авто-генерация после подтверждения доставки" },
+  "doc.orct.name": { en: "Incoming Payment", uz: "Kiruvchi to'lov", ru: "Входящий платёж" },
+  "doc.orct.desc": {
+    en: "Customer payment received and allocated against the open invoice. Internal Reconciliation clears the receivable. Cash cycle complete.",
+    uz: "Mijoz to'lovi qabul qilindi va ochiq hisob-fakturaga taqsimlandi. Naqd pul tsikli tugallandi.",
+    ru: "Оплата клиента получена и распределена по открытому счёту. Внутренняя сверка закрывает дебиторку. Кассовый цикл завершён.",
+  },
+  "doc.orct.trigger": { en: "Payment received & bank-matched", uz: "To'lov qabul qilindi va bank bilan solishtirildi", ru: "Платёж получен и сверен с банком" },
+
+  // ── KPI ──
+  "kpi.section": { en: "03 / Financial Intelligence", uz: "03 / Moliyaviy razvedka", ru: "03 / Финансовая аналитика" },
+  "kpi.title": { en: "5-Dimension", uz: "5 o'lchovli", ru: "5-мерный" },
+  "kpi.titleAccent": { en: "Analysis", uz: "Tahlil", ru: "Анализ" },
+  "kpi.subtitle": {
+    en: "Every trip is profiled across five analytical dimensions. Real-time KPIs identify exactly where margin erodes.",
+    uz: "Har bir reys beshta analitik o'lchov bo'yicha profillangan. Real vaqt KPI marja qayerda kamayishini aniq aniqlaydi.",
+    ru: "Каждый рейс профилируется по пяти аналитическим измерениям. KPI в реальном времени точно определяют, где сокращается маржа.",
+  },
+  "kpi.dim.fleet": { en: "Fleet", uz: "Avtopark", ru: "Автопарк" },
+  "kpi.dim.route": { en: "Route Type", uz: "Marshrut turi", ru: "Тип маршрута" },
+  "kpi.dim.cargo": { en: "Cargo Category", uz: "Yuk toifasi", ru: "Категория груза" },
+  "kpi.dim.customer": { en: "Customer Segment", uz: "Mijoz segmenti", ru: "Сегмент клиента" },
+  "kpi.dim.time": { en: "Time Period", uz: "Vaqt davri", ru: "Период" },
+  "kpi.profitByRoute": { en: "Profit by Route — Live", uz: "Marshrut bo'yicha foyda — Jonli", ru: "Прибыль по маршруту — Live" },
+  "kpi.realtime": { en: "Real-time", uz: "Real vaqt", ru: "Реальное время" },
+  "kpi.col.route": { en: "Route", uz: "Marshrut", ru: "Маршрут" },
+  "kpi.col.revenue": { en: "Revenue", uz: "Daromad", ru: "Выручка" },
+  "kpi.col.cost": { en: "Cost", uz: "Xarajat", ru: "Затраты" },
+  "kpi.col.margin": { en: "Margin", uz: "Marja", ru: "Маржа" },
+  "kpi.metric.profitTrip": { en: "Profit / Trip", uz: "Foyda / Reys", ru: "Прибыль / Рейс" },
+  "kpi.metric.fleetUtil": { en: "Fleet Utilization", uz: "Avtopark foydalanish", ru: "Утилизация автопарка" },
+  "kpi.metric.revenueKm": { en: "Revenue / Km", uz: "Daromad / Km", ru: "Выручка / Км" },
+  "kpi.metric.onTime": { en: "On-Time Rate", uz: "O'z vaqtida stavka", ru: "Процент вовремя" },
+  "kpi.metric.grni": { en: "GRNI Balance", uz: "GRNI balans", ru: "Баланс ГРНИ" },
+  "kpi.metric.dso": { en: "DSO (Days)", uz: "DSO (Kunlar)", ru: "DSO (Дни)" },
+
+  // ── Triggers ──
+  "triggers.section": { en: "04 / Event-Driven Accounting", uz: "04 / Hodisaga asoslangan hisob", ru: "04 / Событийный учёт" },
+  "triggers.title": { en: "Every Tap,", uz: "Har bir bosish,", ru: "Каждое нажатие —" },
+  "triggers.titleAccent": { en: "a Journal Entry", uz: "jurnal yozuvi", ru: "журнальная проводка" },
+  "triggers.subtitle": {
+    en: "Driver actions on the mobile app are Significant Accounting Events. Each status change triggers automated document creation and G/L postings.",
+    uz: "Mobil ilovadagi haydovchi harakatlari Muhim Buxgalterlik Hodisalari hisoblanadi.",
+    ru: "Действия водителя в мобильном приложении — значимые учётные события.",
+  },
+  "triggers.autoJournal": { en: "Auto-Generated Journal Entry", uz: "Avto-yaratilgan jurnal yozuvi", ru: "Авто-сгенерированная проводка" },
+  "triggers.eventBus": { en: "Event Bus", uz: "Hodisa shinasi", ru: "Шина событий" },
+  "triggers.driverApp": { en: "Driver App", uz: "Haydovchi ilovasi", ru: "Приложение водителя" },
+  "triggers.generalLedger": { en: "General Ledger", uz: "Bosh daftar", ru: "Главная книга" },
+
+  "triggers.ev1.action": { en: "Driver taps \"Loaded\"", uz: "Haydovchi \"Yuklangan\" bosadi", ru: "Водитель нажимает \"Загружен\"" },
+  "triggers.ev1.desc": {
+    en: "Cargo confirmed on vehicle. Trip WIP account is activated. The system begins accruing estimated costs against this trip identifier.",
+    uz: "Yuk transport vositasida tasdiqlandi. Reys WIP hisobi faollashtirildi.",
+    ru: "Груз подтверждён на ТС. Активируется счёт НЗП рейса.",
+  },
+  "triggers.ev2.action": { en: "Driver logs fuel receipt", uz: "Haydovchi yoqilg'i kvitansiyasini qayd qiladi", ru: "Водитель регистрирует чек на топливо" },
+  "triggers.ev2.desc": {
+    en: "Mobile GRPO equivalent. The fuel expense is recognized immediately and liability accrued to the vendor.",
+    uz: "Mobil GRPO ekvivalenti. Yoqilg'i xarajati darhol tan olinadi.",
+    ru: "Мобильный эквивалент ГРПО. Расход на топливо признаётся немедленно.",
+  },
+  "triggers.ev3.action": { en: "Driver scans toll receipt", uz: "Haydovchi yo'l to'lovi kvitansiyasini skanerlaydi", ru: "Водитель сканирует чек за проезд" },
+  "triggers.ev3.desc": {
+    en: "Landed Cost capture. Border fees and tolls are capitalized directly into the trip's total cost.",
+    uz: "Qo'shimcha xarajatlarni olish. Chegara to'lovlari to'g'ridan-to'g'ri reysning umumiy xarajatiga kiritiladi.",
+    ru: "Учёт дополнительных затрат. Пограничные сборы капитализируются в общую стоимость рейса.",
+  },
+  "triggers.ev4.action": { en: "Driver taps \"Delivered\"", uz: "Haydovchi \"Yetkazildi\" bosadi", ru: "Водитель нажимает \"Доставлен\"" },
+  "triggers.ev4.desc": {
+    en: "Significant Accounting Event. Revenue recognition conditions are met. The system auto-generates an A/R Invoice.",
+    uz: "Muhim Buxgalterlik Hodisasi. Daromadni tan olish shartlari bajarildi. Tizim avtomatik D/O hisob-fakturasini yaratadi.",
+    ru: "Значимое учётное событие. Выполнены условия признания выручки. Система авто-генерирует счёт ДЗ.",
+  },
+
+  // ── Fleet / Gantt ──
+  "fleet.section": { en: "05 / Fleet Operations", uz: "05 / Avtopark operatsiyalari", ru: "05 / Операции автопарка" },
+  "fleet.title": { en: "Fleet", uz: "Avtopark", ru: "Автопарк" },
+  "fleet.titleAccent": { en: "Planning", uz: "Rejalashtirish", ru: "Планирование" },
+  "fleet.subtitle": {
+    en: "Gantt-style scheduling prevents double-bookings while Distribution Rules allocate indirect costs to specific trips based on operational hours.",
+    uz: "Gantt uslubidagi rejalashtirish ikkilamchi band qilishni oldini oladi.",
+    ru: "Планирование в стиле диаграммы Ганта предотвращает двойное бронирование.",
+  },
+  "fleet.completed": { en: "Completed", uz: "Bajarilgan", ru: "Завершено" },
+  "fleet.active": { en: "Active", uz: "Faol", ru: "Активный" },
+  "fleet.conflict": { en: "Conflict", uz: "Ziddiyat", ru: "Конфликт" },
+  "fleet.distRules": { en: "Distribution Rules auto-applied per trip", uz: "Taqsimlash qoidalari har bir reysga avto-qo'llaniladi", ru: "Правила распределения авто-применяются к рейсу" },
+  "fleet.vehicle": { en: "Vehicle", uz: "Transport vositasi", ru: "Транспорт" },
+
+  // ── Vehicle Health (new section) ──
+  "vehicle.section": { en: "06 / Vehicle Management", uz: "06 / Transport boshqaruvi", ru: "06 / Управление транспортом" },
+  "vehicle.title": { en: "Vehicle", uz: "Transport", ru: "Состояние" },
+  "vehicle.titleAccent": { en: "Health & Logs", uz: "Holati va Jurnallar", ru: "Транспорта" },
+  "vehicle.subtitle": {
+    en: "Pre-trip inspections, real-time diagnostics, and complete maintenance history — from the driver's phone to the fleet manager's dashboard.",
+    uz: "Reys oldidan tekshiruv, real vaqt diagnostikasi va to'liq texnik xizmat tarixi — haydovchi telefonidan avtopark boshqaruvchisi paneliga.",
+    ru: "Предрейсовые осмотры, диагностика в реальном времени и полная история обслуживания — от телефона водителя до панели менеджера.",
+  },
+  "vehicle.healthScore": { en: "Health Score", uz: "Holat reytingi", ru: "Рейтинг состояния" },
+  "vehicle.nextService": { en: "Next Service", uz: "Keyingi xizmat", ru: "Следующее ТО" },
+  "vehicle.lastInspection": { en: "Last Inspection", uz: "Oxirgi tekshiruv", ru: "Последний осмотр" },
+  "vehicle.openDefects": { en: "Open Defects", uz: "Ochiq nuqsonlar", ru: "Открытые дефекты" },
+  "vehicle.checklistTitle": { en: "Pre-Trip Checklist", uz: "Reys oldidan tekshiruv ro'yxati", ru: "Предрейсовый чеклист" },
+  "vehicle.tires": { en: "Tire Pressure & Tread", uz: "Shinalar bosimi va protektori", ru: "Давление и протектор шин" },
+  "vehicle.brakes": { en: "Brake System", uz: "Tormoz tizimi", ru: "Тормозная система" },
+  "vehicle.lights": { en: "Lights & Signals", uz: "Chiroqlar va signallar", ru: "Фары и сигналы" },
+  "vehicle.fluids": { en: "Fluid Levels", uz: "Suyuqlik darajalari", ru: "Уровни жидкостей" },
+  "vehicle.engine": { en: "Engine & Transmission", uz: "Dvigatel va transmissiya", ru: "Двигатель и трансмиссия" },
+  "vehicle.body": { en: "Body & Cargo Area", uz: "Kuzov va yuk maydoni", ru: "Кузов и грузовая зона" },
+  "vehicle.pass": { en: "Pass", uz: "O'tdi", ru: "Норма" },
+  "vehicle.warn": { en: "Warning", uz: "Ogohlantirish", ru: "Внимание" },
+  "vehicle.fail": { en: "Fail", uz: "Rad etildi", ru: "Отказ" },
+  "vehicle.maintenanceLog": { en: "Maintenance Log", uz: "Texnik xizmat jurnali", ru: "Журнал обслуживания" },
+  "vehicle.oilChange": { en: "Oil & Filter Change", uz: "Moy va filtr almashtirish", ru: "Замена масла и фильтра" },
+  "vehicle.brakeRepair": { en: "Brake Pad Replacement", uz: "Tormoz qoplama almashtirish", ru: "Замена тормозных колодок" },
+  "vehicle.tireRotation": { en: "Tire Rotation", uz: "Shinalarni almashtirish", ru: "Ротация шин" },
+  "vehicle.transmission": { en: "Transmission Service", uz: "Transmissiya xizmati", ru: "Обслуживание трансмиссии" },
+  "vehicle.inspection": { en: "Annual Inspection", uz: "Yillik tekshiruv", ru: "Ежегодный осмотр" },
+  "vehicle.scheduled": { en: "Scheduled", uz: "Rejalashtirilgan", ru: "Запланировано" },
+  "vehicle.completed2": { en: "Completed", uz: "Bajarilgan", ru: "Завершено" },
+  "vehicle.overdue": { en: "Overdue", uz: "Muddati o'tgan", ru: "Просрочено" },
+
+  // ── Tech Stack ──
+  "stack.section": { en: "07 / Infrastructure", uz: "07 / Infratuzilma", ru: "07 / Инфраструктура" },
+  "stack.title": { en: "Technology", uz: "Texnologiya", ru: "Технологический" },
+  "stack.titleAccent": { en: "Stack", uz: "Steki", ru: "Стек" },
+  "stack.subtitle": {
+    en: "Cloud-native architecture supporting 500+ active trips with a 2-second load time target. Each layer is chosen to maximize reliability, developer velocity, and financial data integrity.",
+    uz: "500+ faol reyslarni 2 soniyalik yuklash vaqti bilan qo'llab-quvvatlovchi bulutga asoslangan arxitektura. Har bir qatlam ishonchlilik, dasturchi samaradorligi va moliyaviy ma'lumotlar yaxlitligini maksimal darajada oshirish uchun tanlangan.",
+    ru: "Облачная архитектура, поддерживающая 500+ активных рейсов с целевым временем загрузки 2 секунды. Каждый уровень выбран для максимальной надёжности, скорости разработки и целостности финансовых данных.",
+  },
+  "stack.dataFlow": { en: "Data Flow Architecture", uz: "Ma'lumotlar oqimi arxitekturasi", ru: "Архитектура потока данных" },
+  "stack.layer.frontend": { en: "Frontend (Web)", uz: "Frontend (Veb)", ru: "Фронтенд (Веб)" },
+  "stack.layer.mobile": { en: "Mobile (Driver)", uz: "Mobil (Haydovchi)", ru: "Мобильный (Водитель)" },
+  "stack.layer.backend": { en: "Backend API", uz: "Backend API", ru: "Бэкенд API" },
+  "stack.layer.db": { en: "Operational DB", uz: "Operatsion MB", ru: "Операционная БД" },
+  "stack.layer.realtime": { en: "Real-time Comms", uz: "Real vaqt aloqa", ru: "Связь в реальном времени" },
+  "stack.layer.logic": { en: "Data Logic", uz: "Ma'lumot mantiqi", ru: "Логика данных" },
+  "stack.layer.infra": { en: "Infrastructure", uz: "Infratuzilma", ru: "Инфраструктура" },
+  "stack.layer.security": { en: "Security", uz: "Xavfsizlik", ru: "Безопасность" },
+  "stack.frontend.rationale": {
+    en: "Reactive UI required for real-time dispatch boards and multidimensional KPI reporting. Next.js provides SSR for fast initial load, API routes for BFF pattern, and ISR for cached report pages. Component library with Tailwind CSS ensures consistent design across WebAdmin and Customer Portal.",
+    uz: "Real vaqt dispetcher panellari va ko'p o'lchovli KPI hisobotlari uchun reaktiv UI talab qilinadi. Next.js tez dastlabki yuklash uchun SSR, BFF naqshi uchun API marshrutlari va keshlangan hisobot sahifalari uchun ISR taqdim etadi. Tailwind CSS bilan komponent kutubxonasi WebAdmin va Mijoz portalida bir xil dizaynni ta'minlaydi.",
+    ru: "Реактивный UI необходим для панелей диспетчеризации в реальном времени и многомерной KPI-отчётности. Next.js обеспечивает SSR для быстрой начальной загрузки, API-маршруты для паттерна BFF и ISR для кэшированных страниц отчётов. Компонентная библиотека с Tailwind CSS гарантирует единый дизайн WebAdmin и портала клиента.",
+  },
+  "stack.mobile.rationale": {
+    en: "Flutter delivers near-native performance on Android 10+ with a single codebase. Critical for background GPS tracking every 5 seconds, camera integration for CMR/receipt scanning, and robust offline-first architecture with SQLite queue. Dart's strong typing mirrors TypeScript backend contracts.",
+    uz: "Flutter yagona kod bazasi bilan Android 10+ da deyarli native ishlashni ta'minlaydi. Har 5 soniyada fon GPS kuzatuvi, CMR/kvitansiya skanerlash uchun kamera integratsiyasi va SQLite navbati bilan mustahkam oflayn-birinchi arxitektura uchun muhim. Dart ning kuchli tiplashi TypeScript backend shartnomalarini aks ettiradi.",
+    ru: "Flutter обеспечивает околонативную производительность на Android 10+ с единой кодовой базой. Критичен для фонового GPS-трекинга каждые 5 секунд, интеграции камеры для сканирования CMR/чеков и надёжной offline-first архитектуры с очередью SQLite. Строгая типизация Dart отражает контракты TypeScript-бэкенда.",
+  },
+  "stack.backend.rationale": {
+    en: "Node.js with TypeScript provides a clean API layer that enforces SAP-grade document structure contracts at compile time. Express/Fastify handles REST endpoints while Bull MQ manages async job queues for invoice generation, GPS batch processing, and report scheduling. Prisma ORM ensures type-safe database access matching PostgreSQL schema.",
+    uz: "TypeScript bilan Node.js kompilyatsiya vaqtida SAP darajasidagi hujjat tuzilmasi shartnomalarini amalga oshiradigan toza API qatlamini taqdim etadi. Express/Fastify REST endpointlarni boshqaradi, Bull MQ esa hisob-faktura yaratish, GPS paketli qayta ishlash va hisobot rejalashtirish uchun asinxron ish navbatlarini boshqaradi. Prisma ORM PostgreSQL sxemasiga mos tip-xavfsiz ma'lumotlar bazasiga kirishni ta'minlaydi.",
+    ru: "Node.js с TypeScript предоставляет чистый API-слой, обеспечивающий контракты структуры документов уровня SAP на этапе компиляции. Express/Fastify обрабатывает REST-эндпоинты, Bull MQ управляет асинхронными очередями для генерации счетов, пакетной обработки GPS и планирования отчётов. Prisma ORM обеспечивает типобезопасный доступ к БД, соответствующий схеме PostgreSQL.",
+  },
+  "stack.db.rationale": {
+    en: "PostgreSQL is best-in-class for relational financial data. Schema mirrors SAP's Header (O) and Row (1) document pattern — e.g., OINV (header) + INV1 (lines). JSONB columns store flexible cargo metadata. Row-level security isolates customer portal data. pg_cron handles scheduled report generation and data archival.",
+    uz: "PostgreSQL relatsion moliyaviy ma'lumotlar uchun eng yaxshi. Sxema SAP ning Sarlavha (O) va Qator (1) hujjat naqshini aks ettiradi — masalan, OINV (sarlavha) + INV1 (qatorlar). JSONB ustunlari moslashuvchan yuk metama'lumotlarini saqlaydi. Qator darajasidagi xavfsizlik mijoz portali ma'lumotlarini izolyatsiya qiladi. pg_cron rejalashtirilgan hisobot yaratish va ma'lumotlarni arxivlashni boshqaradi.",
+    ru: "PostgreSQL — лучший выбор для реляционных финансовых данных. Схема повторяет паттерн документов SAP: Заголовок (O) + Строки (1) — например, OINV (заголовок) + INV1 (строки). Столбцы JSONB хранят гибкие метаданные груза. Row-level security изолирует данные портала клиента. pg_cron управляет генерацией отчётов по расписанию и архивацией данных.",
+  },
+  "stack.realtime.rationale": {
+    en: "WebSockets via Socket.io enable the 5-second GPS tracking SLA. Dedicated namespaces per portal: /dispatch for live fleet map, /driver for status push, /customer for shipment tracking. Redis adapter enables horizontal scaling across multiple server instances. Fallback to SSE for restrictive network environments.",
+    uz: "Socket.io orqali WebSockets 5 soniyalik GPS kuzatuv SLA ni ta'minlaydi. Har bir portal uchun ajratilgan nomlar maydoni: /dispatch jonli avtopark xaritasi uchun, /driver holat push uchun, /customer jo'natma kuzatuvi uchun. Redis adapter bir nechta server misollarida gorizontal masshtablashni ta'minlaydi. Cheklangan tarmoq muhitlari uchun SSE ga zaxira o'tish.",
+    ru: "WebSockets через Socket.io обеспечивают SLA GPS-трекинга в 5 секунд. Выделенные пространства имён по порталам: /dispatch для карты автопарка, /driver для push-статусов, /customer для отслеживания отправок. Redis-адаптер обеспечивает горизонтальное масштабирование. Фоллбэк на SSE для ограниченных сетевых сред.",
+  },
+  "stack.logic.rationale": {
+    en: "Perpetual Inventory model treats every trip as a financial transaction — cargo pickup debits WIP, delivery credits revenue. Double-entry bookkeeping engine validates all journal entries before commit. Control Account reconciliation runs continuously, flagging any sub-ledger drift within 30 seconds.",
+    uz: "Doimiy inventarizatsiya modeli har bir reysni moliyaviy tranzaksiya sifatida ko'radi — yuk olish WIP ni debetlaydi, yetkazib berish daromadni kreditlaydi. Ikki tomonlama buxgalteriya mexanizmi barcha jurnal yozuvlarini tasdiqlashdan oldin tekshiradi. Nazorat hisobi solishtirmasi uzluksiz ishlaydi va har qanday sub-daftar og'ishini 30 soniya ichida belgilaydi.",
+    ru: "Модель непрерывного учёта рассматривает каждый рейс как финансовую транзакцию — приёмка груза дебетует НЗП, доставка кредитует выручку. Движок двойной записи валидирует все проводки перед фиксацией. Сверка контрольных счетов работает непрерывно, выявляя любое расхождение субледжера в течение 30 секунд.",
+  },
+  "stack.infra.rationale": {
+    en: "Docker containers orchestrated with Kubernetes on AWS/GCP. Auto-scaling based on active trip count. Separate clusters for API, worker jobs, and WebSocket servers. CI/CD via GitHub Actions with staging → production promotion. Infrastructure as Code with Terraform for reproducible deployments.",
+    uz: "AWS/GCP da Kubernetes bilan boshqariladigan Docker konteynerlar. Faol reyslar soniga qarab avto-masshtablash. API, ishchi vazifalar va WebSocket serverlari uchun alohida klasterlar. GitHub Actions orqali CI/CD staging → production ko'tarilishi bilan. Takrorlanadigan joylashtirishlar uchun Terraform bilan Infrastructure as Code.",
+    ru: "Docker-контейнеры, оркестрируемые Kubernetes на AWS/GCP. Авто-масштабирование по количеству активных рейсов. Отдельные кластеры для API, воркеров и WebSocket-серверов. CI/CD через GitHub Actions со staging → production промоушеном. Infrastructure as Code с Terraform для воспроизводимых деплоев.",
+  },
+  "stack.security.rationale": {
+    en: "JWT + refresh token authentication with role-based access control (Dispatcher, Driver, Customer, Accountant). API rate limiting and request validation via Zod schemas. All financial documents are immutable — corrections create reversal entries. Full audit trail on every document state change with user ID, timestamp, and IP.",
+    uz: "Rolga asoslangan kirish nazorati (Dispetcher, Haydovchi, Mijoz, Buxgalter) bilan JWT + yangilash tokeni autentifikatsiyasi. Zod sxemalari orqali API tezlik cheklovi va so'rov tekshiruvi. Barcha moliyaviy hujjatlar o'zgarmasdir — tuzatishlar teskari yozuvlarni yaratadi. Har bir hujjat holati o'zgarishi bo'yicha foydalanuvchi ID, vaqt belgisi va IP bilan to'liq audit izi.",
+    ru: "JWT + refresh token аутентификация с ролевым доступом (Диспетчер, Водитель, Клиент, Бухгалтер). Rate limiting API и валидация запросов через Zod-схемы. Все финансовые документы иммутабельны — исправления создают сторно-записи. Полный аудит-трейл каждого изменения состояния документа с user ID, меткой времени и IP.",
+  },
+
+  // ── Control Account ──
+  "control.section": { en: "08 / Enterprise Logic", uz: "08 / Korporativ mantiq", ru: "08 / Корпоративная логика" },
+  "control.title": { en: "Control Account", uz: "Nazorat hisobi", ru: "Контрольный счёт" },
+  "control.titleAccent": { en: "Mechanism", uz: "Mexanizmi", ru: "Механизм" },
+  "control.subtitle": {
+    en: "BP balances always match the General Ledger without manual reconciliation. Every document auto-posts to both the sub-ledger and the control account simultaneously.",
+    uz: "BP balanslari qo'lda solishtirmasdan doimo Bosh daftarga mos keladi.",
+    ru: "Балансы БП всегда совпадают с Главной книгой без ручной сверки.",
+  },
+  "control.step1": { en: "Business Partner Action", uz: "Biznes hamkor harakati", ru: "Действие бизнес-партнёра" },
+  "control.step2": { en: "Document Created", uz: "Hujjat yaratildi", ru: "Документ создан" },
+  "control.step3": { en: "Sub-Ledger Updated", uz: "Sub-daftar yangilandi", ru: "Субледжер обновлён" },
+  "control.step4": { en: "Control Account in G/L", uz: "B/K dagi nazorat hisobi", ru: "Контрольный счёт в ГК" },
+  "control.reconciliation": { en: "Automatic Reconciliation Proof", uz: "Avtomatik solishtirma dalili", ru: "Автоматическое доказательство сверки" },
+  "control.subLedger": { en: "Sub-Ledger Totals", uz: "Sub-daftar jami", ru: "Итоги субледжера" },
+  "control.glControl": { en: "G/L Control Accounts", uz: "B/K nazorat hisoblari", ru: "Контрольные счета ГК" },
+  "control.proof": { en: "Sub-Ledger ≡ General Ledger — Zero reconciliation difference", uz: "Sub-daftar ≡ Bosh daftar — Nol solishtirma farqi", ru: "Субледжер ≡ Главная книга — Нулевая разница сверки" },
+
+  // ── Footer ──
+  "footer.tagline": {
+    en: "Enterprise-grade Transport Management with SAP-level financial orchestration.",
+    uz: "SAP darajasidagi moliyaviy orkestratsiya bilan korporativ darajadagi Transport Boshqaruvi.",
+    ru: "Управление транспортом корпоративного уровня с финансовой оркестрацией уровня SAP.",
+  },
+  "footer.backToTop": { en: "Back to top", uz: "Yuqoriga", ru: "Наверх" },
+  "footer.standalone": { en: "Standalone · Cloud-Native · SAP-Grade", uz: "Mustaqil · Bulutga asoslangan · SAP darajasida", ru: "Автономная · Облачная · Уровень SAP" },
+
+  // ── Theme ──
+  "theme.light": { en: "Light", uz: "Yorug'", ru: "Светлая" },
+  "theme.dark": { en: "Dark", uz: "Qorong'u", ru: "Тёмная" },
+} as const;
+
+export type TranslationKey = keyof typeof translations;
+
+export function t(key: TranslationKey, locale: Locale): string {
+  const entry = translations[key];
+  if (!entry) return key;
+  return entry[locale] || entry.en;
+}
